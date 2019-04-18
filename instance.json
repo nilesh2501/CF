@@ -1,0 +1,25 @@
+{
+   "Resources": {
+      "SSHSecurityGroup": {
+         "Type": "AWS::EC2::SecurityGroup",
+         "Properties": {
+            "VpcId": "vpc-d501e4af",
+            "GroupDescription": "Open Ports 22 and 80",
+            "SecurityGroupIngress": null
+         }
+      },
+      "EC2Instance": {
+         "Type": "AWS::EC2::Instance",
+         "Properties": {
+            "AvailabilityZone": "us-east-1a",
+            "ImageId": "ami-a4c7edb2",
+            "InstanceType": "t2.micro",
+            "KeyName": "Mysql_EC2",
+            "SubnetId": "subnet-2f32ed73",
+            "SecurityGroupIds": [
+               null
+            ]
+         }
+      }
+   }
+}
